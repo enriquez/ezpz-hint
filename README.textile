@@ -1,7 +1,0 @@
-h1. EZPZ Hint
-
-A simple jQuery plugin for showing a text field's label inside the textbox itself. The hint disappears when it is given focus, and appears again if the inputted text is empty. Typically used for search and login forms.
-
-This plugin works in all modern browsers, and it even works with password field hints.
-
-Check out "the demo and documentation here":http://theezpzway.com/2009/3/28/jquery-plugin-ezpz-hint
