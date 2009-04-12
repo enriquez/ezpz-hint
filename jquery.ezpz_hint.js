@@ -46,6 +46,11 @@
 				$(this).hide();
 			});
 			
+			// swap if there is a default value
+			if ($(this).val() != ''){
+				hint.focus();
+			};
+			
 			// remove the dummy inputs so that they don't get submitted
 			$('form').submit(function(){
 				$('.' + settings.hintClass).remove();
