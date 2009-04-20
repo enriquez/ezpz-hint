@@ -23,6 +23,7 @@
 			hint.attr('size', $(this).attr('size'));
 			hint.attr('name', settings.hintName);
 			hint.attr('autocomplete', 'off');
+			hint.attr('tabIndex', $(this).attr('tabIndex'));
 			hint.addClass(settings.hintClass);
 			hint.val(text);
 			
