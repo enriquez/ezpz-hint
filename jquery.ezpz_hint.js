@@ -54,7 +54,7 @@
 			
 			// remove the dummy inputs so that they don't get submitted
 			$('form').submit(function(){
-				$('.' + settings.hintClass).remove();
+				$('.' + settings.hintName).remove();
 			});
 		});
 		
