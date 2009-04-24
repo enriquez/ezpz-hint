@@ -1,4 +1,4 @@
-// EZPZ Hint v1.1; Copyright (c) 2009 Mike Enriquez, http://theezpzway.com; Released under the MIT License
+// EZPZ Hint v1.1.1; Copyright (c) 2009 Mike Enriquez, http://theezpzway.com; Released under the MIT License
 (function($){
 	$.fn.ezpz_hint = function(options){
 		var defaults = {
