@@ -7,7 +7,8 @@
 		};
 		var settings = $.extend(defaults, options);
 		
-		return this.each(function(){
+		return this.each(function(i){
+			var id = settings.hintName + '_' + i;
 			var hint;
 			var dummy_input;
 			
@@ -15,13 +16,13 @@
 			text = $(this).attr('title');
 			
 			// create a dummy input and place it before the input
-			$('<input type="text" name="temp" value="" />').insertBefore($(this));
+			$('<input type="text" id="' + id + '" value="" />')
+				.insertBefore($(this));
 			
 			// set the dummy input's attributes
 			hint = $(this).prev('input:first');
 			hint.attr('class', $(this).attr('class'));
 			hint.attr('size', $(this).attr('size'));
-			hint.attr('name', settings.hintName);
 			hint.attr('autocomplete', 'off');
 			hint.attr('tabIndex', $(this).attr('tabIndex'));
 			hint.addClass(settings.hintClass);
@@ -51,11 +52,6 @@
 			if ($(this).val() != ''){
 				hint.focus();
 			};
-			
-			// remove the dummy inputs so that they don't get submitted
-			$('form').submit(function(){
-				$('.' + settings.hintName).remove();
-			});
 		});
 		
 	};
