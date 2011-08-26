@@ -12,8 +12,8 @@
 			var hint;
 			var dummy_input;
 			
-			// grab the input's title attribute
-			text = $(this).attr('title');
+			// grab the input's placeholder attribute
+			text = $(this).attr('placeholder');
 			
 			// create a dummy input and place it before the input
 			$('<input type="text" id="' + id + '" value="" />')
