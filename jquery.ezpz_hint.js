@@ -11,6 +11,10 @@
 			var id = settings.hintName + '_' + i;
 			var hint;
 			var dummy_input;
+			if ($(this).hasClass('select2-focusser') || $(this).hasClass('select2-input'))
+     			{
+               			return true; //skips to the next iteration for select2 inputs
+            		}
 			
 			// grab the input's placeholder attribute
 			text = $(this).attr('placeholder');
