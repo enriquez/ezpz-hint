@@ -3,12 +3,14 @@
 	$.fn.ezpz_hint = function(options){
 		var defaults = {
 			hintClass: 'ezpz-hint',
-			hintName: 'ezpz_hint_dummy_input'
+			hintName: 'ezpz_hint_dummy_input',
+			hintColor: '#999999'
 		};
 		var settings = $.extend(defaults, options);
 		
 		return this.each(function(i){
 			var id = settings.hintName + '_' + i;
+			var color = settings.hintColor;
 			var hint;
 			var dummy_input;
 			if ($(this).hasClass('select2-focusser') || $(this).hasClass('select2-input'))
@@ -20,7 +22,7 @@
 			text = $(this).attr('placeholder');
 			
 			// create a dummy input and place it before the input
-			$('<input type="text" id="' + id + '" value="" />')
+			$('<input type="text" id="' + id + '" value="" style="color:' + color + ';" />')
 				.insertBefore($(this));
 			
 			// set the dummy input's attributes
